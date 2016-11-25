@@ -25,7 +25,7 @@ Lottery example.</Description>
 <ClassMethod>1</ClassMethod>
 <ReturnType>%String</ReturnType>
 <Implementation><![CDATA[
- &html<<p align="middle"><img src="lotterylogo.jpg"></p><hr>>
+ &html<<p align="left"><img src="lotterylogo.jpg"></p><hr>>
  Quit ""
 ]]></Implementation>
 </Method>
