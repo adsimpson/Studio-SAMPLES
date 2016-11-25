@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="User.Person">
+<ProcedureBlock>1</ProcedureBlock>
+<Super>%Persistent,%Populate</Super>
+<TimeCreated>59912,46120.301956</TimeCreated>
+<Inheritance>right</Inheritance>
+
+<Property name="name">
+<Type>%String</Type>
+<Parameter name="POPSPEC" value="Name()"/>
+<Parameter name="TRUNCATE" value="1"/>
+</Property>
+
+<Property name="city">
+<Type>%String</Type>
+<Parameter name="POPSPEC" value="City()"/>
+<Parameter name="TRUNCATE" value="1"/>
+</Property>
+
+<Property name="dob">
+<Type>%Date</Type>
+</Property>
+
+<Property name="score">
+<Type>%Integer</Type>
+<Parameter name="POPSPEC" value="Integer(0,100)"/>
+</Property>
+
+<Property name="salary">
+<Type>%Float</Type>
+<Parameter name="POPSPEC" value="Float(5000,400000,2)"/>
+</Property>
+
+<Index name="nameIDX">
+<Data>name</Data>
+<Properties>name</Properties>
+</Index>
+
+<Index name="cityIDX">
+<Type>index</Type>
+<Properties>city:SQLSTRING</Properties>
+</Index>
+
+<Index name="nsIDX">
+<Properties>name,score</Properties>
+</Index>
+
+<Index name="ncIDX">
+<Properties>name,city</Properties>
+</Index>
+
+<Index name="scoreIDX">
+<Properties>score:SQLUPPER</Properties>
+</Index>
+
+<Index name="dobIDX">
+<Properties>dob</Properties>
+</Index>
+
+<Index name="salaryIDX">
+<Properties>salary</Properties>
+</Index>
+
+<Index name="salaryStrIDX">
+<Properties>salary:SQLString</Properties>
+</Index>
+
+<Storage name="Default">
+<Type>%Library.CacheStorage</Type>
+<DataLocation>^User.PersonD</DataLocation>
+<DefaultData>PersonDefaultData</DefaultData>
+<IdLocation>^User.PersonD</IdLocation>
+<IndexLocation>^User.PersonI</IndexLocation>
+<StreamLocation>^User.PersonS</StreamLocation>
+<ExtentSize>100000</ExtentSize>
+<Data name="PersonDefaultData">
+<Structure>listnode</Structure>
+<Subscript/>
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+<Value name="2">
+<Value>city</Value>
+</Value>
+<Value name="3">
+<Value>dob</Value>
+</Value>
+<Value name="4">
+<Value>name</Value>
+</Value>
+<Value name="5">
+<Value>salary</Value>
+</Value>
+<Value name="6">
+<Value>score</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>

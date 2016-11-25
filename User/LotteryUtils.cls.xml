@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="User.LotteryUtils">
+<Description><![CDATA[
+The <CLASS>LotteryUtils</CLASS> class contains a number of common methods used by 
+the pages within the CSP Lottery Example application.]]></Description>
+<Abstract>1</Abstract>
+<IncludeCode>%occInclude,%cspInclude</IncludeCode>
+<IncludeGenerator>%occInclude</IncludeGenerator>
+<ProcedureBlock>0</ProcedureBlock>
+<TimeCreated>59269,47269.89</TimeCreated>
+
+<Method name="onPrePage">
+<Implementation><![CDATA[
+ ; perform page authorization
+ ; if user is not logged in, jump to Error Page
+ Quit $$$OK
+]]></Implementation>
+</Method>
+
+<Method name="displayTitle">
+<Description>
+Write out the HTML to display the common title used by pages within the 
+Lottery example.</Description>
+<ClassMethod>1</ClassMethod>
+<ReturnType>%String</ReturnType>
+<Implementation><![CDATA[
+ &html<<p align="center"><img src="lotterylogo.jpg"></p><hr>>
+ Quit ""
+]]></Implementation>
+</Method>
+
+<Method name="displayUnauthorized">
+<Description>
+Write out the HTML to display the common message display for 
+unauthorized access within the Lottery example.</Description>
+<ClassMethod>1</ClassMethod>
+<ReturnType>%String</ReturnType>
+<Implementation><![CDATA[
+ &html<
+ <p align="center">
+ <font face="Lucida Sans" color="yellow"  size="+3">
+ <font color="red"><b>Unauthorized access.</b></font></p>
+ <p align="center">
+ You must <a href='#(##class(%CSP.Page).Link("lottery.csp"))#'>login</a> to visit this page.</p>
+ </font>
+ >
+ Quit ""
+]]></Implementation>
+</Method>
+</Class>
+</Export>

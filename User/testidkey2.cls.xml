@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="User.testidkey2">
+<Super>%Persistent</Super>
+<TimeCreated>60067,59079.705438</TimeCreated>
+
+<Index name="IDKEY">
+<IdKey>1</IdKey>
+<Properties>Name,Num</Properties>
+</Index>
+
+<Property name="Name">
+<Type>%String</Type>
+</Property>
+
+<Property name="Num">
+<Type>%Integer</Type>
+</Property>
+
+<Property name="Age">
+<Type>%Integer</Type>
+</Property>
+
+<Index name="ageindex">
+<Properties>Age</Properties>
+</Index>
+
+<Storage name="Default">
+<Type>%Library.CacheStorage</Type>
+<DataLocation>^User.testidkey2D</DataLocation>
+<DefaultData>testidkey2DefaultData</DefaultData>
+<IdLocation>^User.testidkey2D</IdLocation>
+<IndexLocation>^User.testidkey2I</IndexLocation>
+<StreamLocation>^User.testidkey2S</StreamLocation>
+<ExtentSize>100000</ExtentSize>
+<Data name="testidkey2DefaultData">
+<Structure>listnode</Structure>
+<Subscript/>
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+<Value name="2">
+<Value>Age</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>

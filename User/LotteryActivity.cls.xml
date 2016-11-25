@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Export generator="Cache" version="25">
+<Class name="User.LotteryActivity">
+<Description><![CDATA[
+The <CLASS>LotteryUser</CLASS> class represents a specific user activity  
+the CSP Lottery Example application.]]></Description>
+<Super>%Persistent</Super>
+<TimeCreated>59269,47269.89</TimeCreated>
+
+<Property name="TheUser">
+<Type>LotteryUser</Type>
+</Property>
+
+<Property name="ActivityTime">
+<Type>%TimeStamp</Type>
+<InitialExpression>$zdt($H,3)</InitialExpression>
+<Required>1</Required>
+</Property>
+
+<Property name="ActivityType">
+<Type>%String</Type>
+<Required>1</Required>
+</Property>
+
+<Property name="Amount">
+<Type>%Integer</Type>
+<InitialExpression>0</InitialExpression>
+<Required>1</Required>
+</Property>
+
+<Property name="Product">
+<Type>%String</Type>
+<Required>1</Required>
+</Property>
+
+<Storage name="Default">
+<Type>%Library.CacheStorage</Type>
+<DataLocation>^User.LotteryActivityD</DataLocation>
+<DefaultData>LotteryActivityDefaultData</DefaultData>
+<IdLocation>^User.LotteryActivityD</IdLocation>
+<IndexLocation>^User.LotteryActivityI</IndexLocation>
+<StreamLocation>^User.LotteryActivityS</StreamLocation>
+<ExtentSize>100000</ExtentSize>
+<Data name="LotteryActivityDefaultData">
+<Structure>listnode</Structure>
+<Subscript/>
+<Value name="1">
+<Value>%%CLASSNAME</Value>
+</Value>
+<Value name="2">
+<Value>ActivityTime</Value>
+</Value>
+<Value name="3">
+<Value>ActivityType</Value>
+</Value>
+<Value name="4">
+<Value>Amount</Value>
+</Value>
+<Value name="5">
+<Value>Product</Value>
+</Value>
+<Value name="6">
+<Value>TheUser</Value>
+</Value>
+</Data>
+</Storage>
+</Class>
+</Export>
